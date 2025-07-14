@@ -11,7 +11,6 @@
       background: linear-gradient(45deg, #ff9a9e, #fad0c4);
       color: #fff;
       text-align: center;
-      overflow-x: hidden;
     }
 
     h1 {
@@ -54,18 +53,20 @@
       margin-bottom: 80px;
     }
 
-    .hearts {
-      position: fixed;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 2em;
-      animation: floatHearts 3s infinite linear;
+    button {
+      padding: 15px 30px;
+      background-color: #fff;
+      color: #ff69b4;
+      border: none;
+      border-radius: 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
+      margin-top: 20px;
     }
 
-    @keyframes floatHearts {
-      0% { bottom: 0; opacity: 1; }
-      100% { bottom: 100%; opacity: 0; }
+    button:hover {
+      background-color: #ffe6f0;
     }
 
     marquee {
@@ -77,10 +78,8 @@
 <body>
   <h1>💘 Sana Aşığım! 💘</h1>
 
-  <!-- Profil Fotoğrafı -->
   <img src="https://i.imgur.com/bqONQVe.jpg" alt="Profil Fotoğrafı" class="profile-img">
 
-  <!-- Kısa Şiir -->
   <div class="poem">
     Gözlerine baktığımda dünya duruyor,<br>
     Gülüşünle kalbim hop oturup hop kalkıyor.<br>
@@ -88,10 +87,8 @@
     Cidden diyorum, sana çok fena tutulmuşum 😳
   </div>
 
-  <!-- Kayan Yazı -->
   <marquee behavior="scroll" direction="left">💖 Kalbim seninle atıyor... 💖 Hep seninleyim... 💖</marquee>
 
-  <!-- Uzun Şiir -->
   <div class="long-poem">
     Seni gördüğüm günden beri, kalbimde bir yangın,<br>
     Adını duyduğumda bile içim titriyor anın anın.<br><br>
@@ -109,12 +106,10 @@
     Belki bilmezsin ama, ben her şeyimle senken! 💌
   </div>
 
-  <!-- Kalpler -->
-  <div class="hearts">❤️❤️❤️❤️❤️</div>
+  <button onclick="document.getElementById('music').play()">💖 Müziği Başlat 💖</button>
 
-  <!-- Arka Planda Çalan Müzik -->
-  <audio autoplay loop>
-  <source src="/music.mp3" type="audio/mpeg">
+  <audio id="music" loop>
+    <source src="/music.mp3" type="audio/mpeg">
   </audio>
 </body>
 </html>
