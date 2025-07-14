@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sana Aşığım 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 20px;
+      animation: rainbow 5s infinite;
+    }
+
+    @keyframes rainbow {
+      0% { color: red; }
+      20% { color: orange; }
+      40% { color: yellow; }
+      60% { color: green; }
+      80% { color: blue; }
+      100% { color: violet; }
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 0 20px #fff;
+      margin-top: 10px;
+    }
+
+    .poem, .long-poem {
+      max-width: 700px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      font-size: 1.3em;
+      box-shadow: 0 0 20px #fff4;
+    }
+
+    .long-poem {
+      font-size: 1.1em;
+      margin-bottom: 80px;
+    }
+
+    .hearts {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      animation: floatHearts 3s infinite linear;
+    }
+
+    @keyframes floatHearts {
+      0% { bottom: 0; opacity: 1; }
+      100% { bottom: 100%; opacity: 0; }
+    }
+
+    marquee {
+      font-size: 1.2em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>💘 Sana Aşığım! 💘</h1>
+
+  <!-- Profil Fotoğrafı -->
+  <img src="https://i.imgur.com/bqONQVe.jpg" alt="Profil Fotoğrafı" class="profile-img">
+
+  <!-- Kısa Şiir -->
+  <div class="poem">
+    Gözlerine baktığımda dünya duruyor,<br>
+    Gülüşünle kalbim hop oturup hop kalkıyor.<br>
+    Sen varken dünya daha güzel,<br>
+    Cidden diyorum, sana çok fena tutulmuşum 😳
+  </div>
+
+  <!-- Kayan Yazı -->
+  <marquee behavior="scroll" direction="left">💖 Kalbim seninle atıyor... 💖 Hep seninleyim... 💖</marquee>
+
+  <!-- Uzun Şiir -->
+  <div class="long-poem">
+    Seni gördüğüm günden beri, kalbimde bir yangın,<br>
+    Adını duyduğumda bile içim titriyor anın anın.<br><br>
+
+    Sabah güneşi gibi doğdun hayatıma,<br>
+    Gecenin yıldızı gibi ışık oldun karanlığıma.<br><br>
+
+    Gülüşün bahar, sesin huzur,<br>
+    Varlığın bile yetiyor bana, başka bir şeyin lüzumu yoktur.<br><br>
+
+    Eğer bu bir rüyaysa, uyanmak istemem asla,<br>
+    Çünkü uyanınca sensizliğe düşmek var ya...<br><br>
+
+    Kalbimi sana verdim, usulca, içten,<br>
+    Belki bilmezsin ama, ben her şeyimle senken! 💌
+  </div>
+
+  <!-- Kalpler -->
+  <div class="hearts">❤️❤️❤️❤️❤️</div>
+
+  <!-- Arka Planda Çalan Müzik -->
+  <audio autoplay loop hidden>
+    <source src="https://www.bensound.com/bensound-music/bensound-inlove.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
