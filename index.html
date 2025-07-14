@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sana Aşığım 💖</title>
   <style>
     body {
@@ -53,20 +53,33 @@
       margin-bottom: 80px;
     }
 
-    button {
-      padding: 15px 30px;
+    .music-button {
+      position: relative;
+      float: right;
+      margin: 20px 20px 0 0;
+      z-index: 10;
+    }
+
+    .music-button button {
+      padding: 10px 20px;
       background-color: #fff;
       color: #ff69b4;
       border: none;
       border-radius: 20px;
-      font-size: 1.1em;
+      font-size: 1em;
       cursor: pointer;
       box-shadow: 0 0 10px #fff;
-      margin-top: 20px;
     }
 
-    button:hover {
-      background-color: #ffe6f0;
+    .music-player {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .music-player iframe {
+      border: none;
+      width: 300px;
+      height: 80px;
     }
 
     marquee {
@@ -76,40 +89,49 @@
   </style>
 </head>
 <body>
+
+  <!-- Müzik Başlat Butonu -->
+  <div class="music-button">
+    <button onclick="startMusic()">💖 Müziği Başlat 💖</button>
+    <div class="music-player" id="musicPlayer">
+      <iframe src="https://www.youtube.com/embed/1ScjK2vlbXg?autoplay=1&loop=1&playlist=1ScjK2vlbXg" allow="autoplay"></iframe>
+    </div>
+  </div>
+
   <h1>💘 Sana Aşığım! 💘</h1>
 
-  <img src="https://i.imgur.com/bqONQVe.jpg" alt="Profil Fotoğrafı" class="profile-img">
+  <img src="https://i.imgur.com/bqONQVe.jpg" alt="Profil Fotoğrafı" class="profile-img" />
 
   <div class="poem">
-    Gözlerine baktığımda dünya duruyor,<br>
-    Gülüşünle kalbim hop oturup hop kalkıyor.<br>
-    Sen varken dünya daha güzel,<br>
+    Gözlerine baktığımda dünya duruyor,<br />
+    Gülüşünle kalbim hop oturup hop kalkıyor.<br />
+    Sen varken dünya daha güzel,<br />
     Cidden diyorum, sana çok fena tutulmuşum 😳
   </div>
 
   <marquee behavior="scroll" direction="left">💖 Kalbim seninle atıyor... 💖 Hep seninleyim... 💖</marquee>
 
   <div class="long-poem">
-    Seni gördüğüm günden beri, kalbimde bir yangın,<br>
-    Adını duyduğumda bile içim titriyor anın anın.<br><br>
+    Seni gördüğüm günden beri, kalbimde bir yangın,<br />
+    Adını duyduğumda bile içim titriyor anın anın.<br /><br />
 
-    Sabah güneşi gibi doğdun hayatıma,<br>
-    Gecenin yıldızı gibi ışık oldun karanlığıma.<br><br>
+    Sabah güneşi gibi doğdun hayatıma,<br />
+    Gecenin yıldızı gibi ışık oldun karanlığıma.<br /><br />
 
-    Gülüşün bahar, sesin huzur,<br>
-    Varlığın bile yetiyor bana, başka bir şeyin lüzumu yoktur.<br><br>
+    Gülüşün bahar, sesin huzur,<br />
+    Varlığın bile yetiyor bana, başka bir şeyin lüzumu yoktur.<br /><br />
 
-    Eğer bu bir rüyaysa, uyanmak istemem asla,<br>
-    Çünkü uyanınca sensizliğe düşmek var ya...<br><br>
+    Eğer bu bir rüyaysa, uyanmak istemem asla,<br />
+    Çünkü uyanınca sensizliğe düşmek var ya...<br /><br />
 
-    Kalbimi sana verdim, usulca, içten,<br>
+    Kalbimi sana verdim, usulca, içten,<br />
     Belki bilmezsin ama, ben her şeyimle senken! 💌
   </div>
 
-  <button onclick="document.getElementById('music').play()">💖 Müziği Başlat 💖</button>
-
-  <audio id="music" loop>
-    <source src="/music.mp3" type="audio/mpeg">
-  </audio>
+  <script>
+    function startMusic() {
+      document.getElementById('musicPlayer').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
